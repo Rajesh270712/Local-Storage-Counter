@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCAL STORAGE COUNTER</title>
+</head>
+<body>
+    <h1>0</h1>
+    <button id="likeButton">Like</button>
+    <button id="unlikeButton">Unlike</button>
+</body>
+
+<script>
+    document.querySelector("#likeButton").addEventListener("click", likeFunc)
+    document.querySelector("#unlikeButton").addEventListener("click",unlikeFunc)
+
+    var count;
+
+    if(localStorage.getItem("counter")==null)
+    {
+        count=0;
+    }
+    else
+    {
+        count=localStorage.getItem("counter");
+    }
+    document.querySelector("h1").innerText=count;
+    function likeFunc()
+    {
+        count++;
+        localStorage.setItem("counter",count);
+        document.querySelector("h1").innerText=count;
+    }
+    function unlikeFunc()
+    {
+        count--;
+        localStorage.setItem("counter",count);
+        document.querySelector("h1").innerText=count;
+    }
+</script>
+</html>
