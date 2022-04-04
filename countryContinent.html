@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:aqua
+
+    }
+    
+    #continent{
+        margin-top: 10px;
+        display: block;
+        background-color: rgb(18, 92, 111);
+        color: white;
+        border: 10px;
+        padding: 4px 20px;
+    }
+
+    label{
+        color: rgb(20, 55, 182);
+        font-weight: 700;
+    }
+</style>
+<body>
+    <label for="">Country: </label>
+    <select name="Country" id="continent_select" value="country" >
+        <option value="select">Select</option>
+        <option value="India">India</option>
+        <option value="United States of America">United States of America</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+   </select>
+  
+
+   <button id="continent" >Submit</button>
+</body>
+
+<script>
+    document.querySelector("#continent").addEventListener("click", findContinent)
+
+    function findContinent(){
+        event.preventDefault();
+        var country=document.querySelector("#continent_select").value;
+        var continent=find(country);
+        alert(continent);
+        
+
+    }
+    function find(country)
+    {
+        switch (country){
+            case "India":
+            return "Asia"
+            case "United States of America":
+                return "North America"
+            case "China":
+                return "Asia"
+            case "Nepal":
+                return "Asia"
+            case "Australia":
+                return "Australia"
+            case "France":
+                return "Europe"
+            case "Germany":
+                return "Europe"
+            case "South Africa":
+                return "Africa"
+            case "Nigeria":
+                return "Africa"
+            case "Mexico":
+                return "North America"
+            case "Argentina":
+                return "South America"
+            case "Brazil":
+                return "South America"
+            case "Canada":
+                return "North America"
+            case "Singapore":
+                return "Asia"
+            case "Sweden":
+                return "Europe"
+            
+        }
+    }
+</script>
+</html>

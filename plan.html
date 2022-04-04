@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Practical</title>
+    <style>
+        #parent{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 200px;
+            gap: 40px;
+        }
+
+        #parent>div{
+            background-color: rgb(67, 175, 175);
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<script>
+    var div=document.createElement("div");
+    div.setAttribute("id","parent");
+
+    
+    var div1=document.createElement("div");
+    var div2=document.createElement("div");
+    var div3=document.createElement("div");
+
+    div.append(div1,div2,div3);
+    document.querySelector("body").append(div)
+</script>
+</html>

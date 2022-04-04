@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+
+        }
+        .parent{
+            margin: 3%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,100%);
+            gap:50% 5%;
+            grid-template-areas: 
+            "a b"
+            "d ."
+            ;
+            
+        }
+        .parent>div{
+            width: 100%;
+            /* height: 100%; */
+            border: 1px solid red;
+            font-size: 2vw;
+            color: black;
+            text-align: center;
+
+            /* order: 2; */
+            
+        }
+        .i1{
+            grid-area: a;
+            background-color: aqua;
+        }
+        .i2{
+            grid-area: b;
+            background-color: rgb(173, 136, 33);
+            
+        }
+        .i3{
+           
+            grid-area: c;
+            background-color: rgb(34, 180, 83);
+        }
+        .i4{
+           
+            grid-area: d;
+            background-color: rgb(175, 18, 149);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <div class="i1">i1</div>
+        <div class="i2">i2</div>
+        <div class="i3">i3</div>
+        <div class="i4">i4</div>
+    </div>
+   
+    
+</body>
+</html>

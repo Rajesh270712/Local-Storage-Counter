@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exponent Calculator</title>
+</head>
+<style>
+   
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        margin-top: 10px;
+        margin-right: 70%;
+        padding: 3px;
+    }
+    button{
+        margin-right: 80%;
+        margin-top: 15px;
+        padding: 3px;
+        
+        
+    }
+</style>
+<body>
+    <div class="container">
+        <input type="number" placeholder="Number 1">
+        <input type="number" placeholder="Number 2">
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="exponential()">Click Here</button>
+        <p>Exponential Value</p>
+    
+    </div>
+</body>
+
+<script>
+    var number=document.querySelectorAll("input");
+    // var num1=number[0].value;
+    // var num2=number[1].value;
+    function multiply(){
+        event.preventDefault();
+        var num1=number[0].value;
+        var num2=number[1].value;
+        // console.log(res)
+        var res=num1*num2;
+        alert(res)
+    }
+
+    function exponential(){
+        var num1=number[0].value;
+        var num2=number[1].value;
+        for(var i=1;i<num2;i++)
+        {
+            num1*=num2;
+        }
+        document.querySelector("p").innerText=num1;
+    }
+</script>
+</html>
