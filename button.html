@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Buttons</title>
+</head>
+    <style>
+    .container{
+        display: grid;
+        grid-template-columns: repeat(9,auto);
+        gap: 6px;
+        padding: 3%;
+        padding: 30px  ;
+    }
+
+    .container>div{
+        text-align: center;
+        /* border: 1px solid red; */
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 10px  ;
+        font-size: 30px;
+        border-radius: 6px;
+    }
+    .container>div:nth-child(1)
+    {
+        background-color: blue;
+        color: white;
+    }
+    .container>div:nth-child(2)
+    {
+        background-color: rgb(115, 112, 112);
+        color: white;
+    }
+    .container>div:nth-child(3)
+    {
+        background-color: rgb(89, 169, 89);
+        color: white;
+    }
+    .container>div:nth-child(4)
+    {
+        background-color: red;
+        color: white;
+    }
+    .container>div:nth-child(5)
+    {
+        background-color: rgb(233, 194, 122);
+        
+    }
+    .container>div:nth-child(6)
+    {
+        background-color: rgb(78, 174, 206);
+        color: white;
+    }
+    .container>div:nth-child(8)
+    {
+        background-color: rgb(68, 65, 65);
+        color: white;
+    }
+    .container>div:nth-child(9)
+    {
+       
+        color: blue;
+    }
+    </style>
+<body>
+    <div class="container">
+        <div>Primary</div>
+        <div>Secondary</div>
+        <div>Success</div>
+        <div>Danger</div>
+        <div>Warning</div>
+        <div>Info</div>
+        <div>Light</div>
+        <div>Dark</div>
+        <div>Link</div>
+    </div>
+</body>
+</html>
